@@ -1,5 +1,9 @@
-.list-group {
+.list-group a {
 	display: flex;
 	flex-direction: row;
-	border: black 1px solid;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	color: black;
 }
