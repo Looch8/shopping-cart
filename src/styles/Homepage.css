@@ -1,0 +1,16 @@
+.homepage-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10%;
+	padding-top: 0;
+}
+
+.homepage-image {
+	max-width: fit-content;
+}
+
+.homepage-title {
+	text-align: center;
+	padding: 10px;
+}
