@@ -1,12 +1,9 @@
-import "./App.css";
-import NavBar from "./components/NavBar";
+// // import "./App.css";
+// // import NavBar from "./components/NavBar";
+// // import Cart from "./components/Cart";
 
-function App() {
-	return (
-		<>
-			<h1>Shopping Cart</h1>
-		</>
-	);
-}
+// function App() {
+// 	return <></>;
+// }
 
-export default App;
+// export default App;

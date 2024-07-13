@@ -1,11 +1,16 @@
 import NavBar from "./NavBar";
 import "../styles/Homepage.css";
 import shoppingCartImage from "../images/shopping-cart.avif";
+import Cart from "./Cart";
 
 const Homepage = () => {
 	return (
 		<>
-			<NavBar />
+			<span className="navbar-cart">
+				<NavBar />
+				<Cart />
+			</span>
+
 			<h1 className="homepage-title">Shopping Cart</h1>
 			<div className="homepage-container">
 				<p className="homepage-info_section">
