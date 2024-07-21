@@ -1,0 +1,25 @@
+.shopping-list-items-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/* Shopping list images */
+.shopping-list-items > li > img {
+	width: 200px;
+}
+
+.shopping-list-items > li {
+	width: 500px;
+}
+
+.shopping-list-items {
+	padding: 20px;
+}
+
+.cart-items-title {
+	text-align: center;
+}
+h1 {
+	margin: 20px;
+}
