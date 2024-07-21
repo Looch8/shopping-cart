@@ -2,13 +2,16 @@ import NavBar from "./NavBar";
 import "../styles/Homepage.css";
 import shoppingCartImage from "../images/shopping-cart.avif";
 import Cart from "./Cart";
+import { Link } from "react-router-dom";
 
 const Homepage = () => {
 	return (
 		<>
 			<span className="navbar-cart">
 				<NavBar />
-				<Cart />
+				<Link to="/cart">
+					<button className="cart-button">Cart</button>
+				</Link>
 			</span>
 
 			<h1 className="homepage-title">Shopping Cart</h1>

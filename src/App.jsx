@@ -1,9 +1,9 @@
-// // import "./App.css";
-// // import NavBar from "./components/NavBar";
-// // import Cart from "./components/Cart";
+// import "./App.css";
+// import NavBar from "./components/NavBar";
+// import Cart from "./components/Cart";
 
-// function App() {
-// 	return <></>;
-// }
+function App() {
+	return <></>;
+}
 
-// export default App;
+export default App;

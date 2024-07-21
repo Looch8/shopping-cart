@@ -3,7 +3,7 @@ import "../styles/cart.css";
 const Cart = () => {
 	return (
 		<div>
-			<button className="cart-button">Cart</button>
+			<h1>Cart</h1>
 		</div>
 	);
 };
