@@ -5,7 +5,7 @@ import "../styles/shop.css";
 import { Link } from "react-router-dom";
 
 const Shop = () => {
-	const [items, setGetItems] = useState([]);
+	const [items, setItems] = useState([]);
 	const [cart, setCart] = useState(0);
 
 	useEffect(() => {
@@ -14,7 +14,7 @@ const Shop = () => {
 			try {
 				const res = await axios.get(URL);
 				console.log(res.data);
-				setGetItems(res.data);
+				setItems(res.data);
 			} catch (error) {
 				console.log(error);
 			}
@@ -43,21 +43,20 @@ const Shop = () => {
 			<h3 className="cart-items-title">
 				Number of items in cart: {cart}
 			</h3>
-			<div className="shopping-list-items-container">
-				{items.map((item, index) => (
-					<ul className="shopping-list-items">
-						<li>
-							<h3>{item.title}</h3>
-							<p>Price: ${item.price}</p>
-							{/* <p>Description: {item.description}</p> */}
 
-							<img src={item.image} alt={index}></img>
-							<h4 onClick={addToCart}>Add to Cart</h4>
-							<h4 onClick={removeFromCart}>Remove from Cart</h4>
-						</li>
-					</ul>
+			<ul className="shopping-list-items">
+				{items.map((item, index) => (
+					<li key={item.id}>
+						<h3>{item.title}</h3>
+						<p>Price: ${item.price}</p>
+						{/* <p>Description: {item.description}</p> */}
+
+						<img src={item.image} alt={index}></img>
+						<h4 onClick={addToCart}>Add to Cart</h4>
+						<h4 onClick={removeFromCart}>Remove from Cart</h4>
+					</li>
 				))}
-			</div>
+			</ul>
 		</>
 	);
 };
