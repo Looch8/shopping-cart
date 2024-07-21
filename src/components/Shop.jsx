@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import NavBar from "./NavBar";
 import axios from "axios";
 import "../styles/shop.css";
+import { Link } from "react-router-dom";
 
 const Shop = () => {
 	const [items, setGetItems] = useState([]);
@@ -21,12 +22,27 @@ const Shop = () => {
 		fetchItems();
 	}, []);
 
+	const addToCart = () => {
+		setCart(cart + 1);
+	};
+
+	const removeFromCart = () => {
+		if (cart > 0) {
+			setCart(cart - 1);
+		}
+	};
+
 	if (!items) return <h3>Loading...</h3>;
 	return (
 		<>
 			<NavBar />
+			<Link to="/cart">
+				<button className="cart-button">Cart</button>
+			</Link>
 			<h1>Shop Page</h1>
-			<h3 className="cart-items-title">Number of items in cart: 0</h3>
+			<h3 className="cart-items-title">
+				Number of items in cart: {cart}
+			</h3>
 			<div className="shopping-list-items-container">
 				{items.map((item, index) => (
 					<ul className="shopping-list-items">
@@ -36,6 +52,8 @@ const Shop = () => {
 							{/* <p>Description: {item.description}</p> */}
 
 							<img src={item.image} alt={index}></img>
+							<h4 onClick={addToCart}>Add to Cart</h4>
+							<h4 onClick={removeFromCart}>Remove from Cart</h4>
 						</li>
 					</ul>
 				))}

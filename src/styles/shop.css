@@ -17,9 +17,19 @@
 	padding: 20px;
 }
 
+h4:hover {
+	cursor: pointer;
+}
+
+h4 {
+	padding: 10px;
+	font-style: italic;
+}
+
 .cart-items-title {
 	text-align: center;
 }
+
 h1 {
 	margin: 20px;
 }
